@@ -1,0 +1,136 @@
+@use '../util' as *;
+
+.card {
+  width: rem(325);
+  background-color: white;
+  border-radius: rem(15);
+  box-shadow: 3px 10px 25px hsla(223, 47%, 23%, 0.3);
+
+  @include breakpoint(sm) {
+    width: rem(450);
+  }
+
+  &__image {
+    display: block;
+    content: "";
+    background: url("/images/illustration-hero.svg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: rem(160);
+    border-top-left-radius: rem(15);
+    border-top-right-radius: rem(15);
+
+    @include breakpoint(sm) {
+      height: rem(220);
+    }
+  }
+
+  &__header {
+    font-size: rem(23);
+    text-align: center;
+    color: var(--dark-blue);
+    margin-top: rem(36);
+    margin-bottom: rem(28);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: rem(24);
+    padding-right: rem(24);
+    @include breakpoint(sm) {
+      padding-left: rem(48);
+      padding-right: rem(48);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: var(--desaturated-blue);
+    line-height: 1.5;
+    margin-bottom: rem(28);
+    padding-left: rem(24);
+    padding-right: rem(24);
+
+    @include breakpoint(sm) {
+      line-height: 1.6;
+    }
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: rem(80);
+    background-color: var(--very-pale-blue);
+    border-radius: rem(5);
+    margin-bottom: rem(24);
+
+    .icon_music {
+      width: rem(48);
+      height: rem(48);
+    }
+
+    .order__plan {
+      margin-right: rem(50);
+
+      p {
+        font-size: rem(14);
+        color: var(--dark-blue);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .price {
+        color: var(--desaturated-blue);
+      }
+    }
+    button {
+      font-size: rem(13);
+      color: var(--bright-blue);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__payment {
+    font-family: inherit;
+    font-size: rem(16);
+    display: block;
+    width: 100%;
+    height: rem(50);
+    background-color: var(--bright-blue);
+    color: white;
+    border: none;
+    border-radius: rem(5);
+    margin-bottom: rem(24);
+    cursor: pointer;
+    box-shadow: 0 5px 20px hsla(245, 75%, 52%, 0.4);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__cancel {
+    font-family: inherit;
+    font-size: rem(16);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: rem(28);
+    color: var(--desaturated-blue);
+
+    &:hover {
+      color: var(--dark-blue);
+    }
+  }
+}

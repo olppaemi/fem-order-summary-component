@@ -1,0 +1,29 @@
+@use '../util' as *;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: rem(16);
+	margin: 0;
+	padding: 0;
+
+	background: url(/images/pattern-background-mobile.svg) no-repeat;
+	background-size: 100%;
+	background-color: var(--pale-blue);
+
+	@include breakpoint(sm) {
+		background: url(/images/pattern-background-desktop.svg) no-repeat;
+		background-size: 100%;
+		background-color: var(--pale-blue);
+	}
+}
