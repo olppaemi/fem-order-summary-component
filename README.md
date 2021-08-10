@@ -21,13 +21,13 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="/images/desktop-screenshot.png" width="70%" alt="desktop-screenshot">
+<img src="/images/desktop-screenshot.png" width="80%" alt="desktop-screenshot">
 <img src="/images/mobile-screenshot.png" width="300" alt="mobile-screenshot">
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/order-summary-component-GdK6J0PPV)
+- Live Site URL: [Live site URL here](https://fem-order-summary-component-omega.vercel.app/)
 
 ## My process
 
