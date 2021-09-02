@@ -1,0 +1,45 @@
+@use '../foundation/colors' as *;
+@use '../util' as *;
+
+.order {
+  margin-right: auto;
+  &__plan {
+    font-size: rem(14);
+    font-weight: 900;
+    color: $clr-order-plan;
+    margin-bottom: rem(3);
+
+    @include breakpoint(medium) {
+      font-size: rem(16);
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__price {
+    font-size: rem(14);
+    color: $clr-order-price;
+
+    @include breakpoint(medium) {
+      font-size: rem(16);
+    }
+  }
+
+  &__change {
+    font-size: rem(13);
+    font-weight: 700;
+    text-decoration: underline;
+    color: $clr-order-change;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover {
+      color: $clr-order-change-hover;
+      text-decoration: none;
+    }
+
+    @include breakpoint(medium) {
+      font-size: rem(14);
+    }
+  }
+}

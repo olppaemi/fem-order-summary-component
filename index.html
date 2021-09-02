@@ -2,40 +2,41 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Frontend Mentor | Order summary card</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="style.css">
+	<title>Frontend Mentor | Order summary card</title>
 </head>
 
 <body>
 	<main class="container">
 		<div class="card">
-			<div class="card__image"></div>
-			<div class="card__header fw-bolder">
-				Order Summary
-			</div>
-			<div class="card__inner ">
-				<div class="card__text">
+			<div class="card__hero"></div>
+			<div class="card__contents">
+				<h1 class="card__header">Order Summary</h1>
+				<p class="card__body">
 					You can now listen to millions of songs, audiobooks, and podcasts on any
 					device anywhere you like!
-				</div>
+				</p>
 				<div class="card__order">
-					<img class="icon-music" src="/images/icon-music.svg" alt="icon-music">
-					<div class="order__plan">
-						<p class="fw-bolder">Annual Plan</p>
-						<p class="price">$59.99/year</p>
+					<div class="order">
+						<h5 class="order__plan">Annual Plan</h5>
+						<p class="order__price">$59.99/year</p>
 					</div>
-					<button class="text-decoration-underline fw-bold">Change</button>
+					<button class="order__change">Change</button>
 				</div>
-				<button class="card__payment fw-bold">Proceed to Payment</button>
-				<button class="card__cancel fw-bolder">Cancel Order</button>
+				<button class="card__cta">Proceed to Payment</button>
+				<button class="card__cancel">Cancel Order</button>
 			</div>
+
 		</div>
+
 	</main>
+
 </body>
 
 </html>

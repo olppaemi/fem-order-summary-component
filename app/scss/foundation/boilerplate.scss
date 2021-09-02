@@ -1,0 +1,29 @@
+@use "colors" as *;
+@use '../util' as *;
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "Red Hat Display", sans-serif;
+	font-weight: 500;
+	background: top / contain no-repeat url(/images/pattern-background-mobile.svg), $clr-bg;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include breakpoint(medium) {
+		background: top / contain no-repeat url(/images/pattern-background-desktop.svg), $clr-bg;
+	}
+}

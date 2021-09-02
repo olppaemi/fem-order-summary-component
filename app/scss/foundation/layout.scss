@@ -1,0 +1,9 @@
+@use '../util' as *;
+
+.container {
+	max-width: rem(327);
+
+	@include breakpoint(medium) {
+		max-width: rem(450);
+	}
+}

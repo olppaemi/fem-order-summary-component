@@ -1,136 +1,107 @@
+@use "../foundation/colors" as *;
 @use '../util' as *;
 
+$border-radius: rem(20);
+
 .card {
-  width: rem(325);
-  background-color: white;
-  border-radius: rem(15);
-  box-shadow: 3px 10px 25px hsla(223, 47%, 23%, 0.3);
+  width: 100%;
+  background: $clr-card-bg;
+  border-radius: $border-radius;
 
-  @include breakpoint(sm) {
-    width: rem(450);
-  }
-
-  &__image {
-    display: block;
-    content: "";
-    background: url("/images/illustration-hero.svg") no-repeat;
-    background-size: 100%;
-    background-position: center;
-    width: 100%;
+  &__hero {
     height: rem(160);
-    border-top-left-radius: rem(15);
-    border-top-right-radius: rem(15);
+    background: center / cover no-repeat url(/images/illustration-hero.svg);
+    border-radius: $border-radius $border-radius 0 0;
 
-    @include breakpoint(sm) {
+    @include breakpoint(medium) {
       height: rem(220);
     }
   }
 
-  &__header {
-    font-size: rem(23);
+  &__contents {
+    padding: rem(32) rem(24);
     text-align: center;
-    color: var(--dark-blue);
-    margin-top: rem(36);
-    margin-bottom: rem(28);
-  }
-
-  &__inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-left: rem(24);
-    padding-right: rem(24);
-    @include breakpoint(sm) {
-      padding-left: rem(48);
-      padding-right: rem(48);
+    justify-content: center;
+
+    @include breakpoint(medium) {
+      padding: rem(45) rem(48) rem(48);
     }
   }
 
-  &__text {
-    text-align: center;
-    color: var(--desaturated-blue);
-    line-height: 1.5;
-    margin-bottom: rem(28);
-    padding-left: rem(24);
-    padding-right: rem(24);
+  &__header {
+    font-size: rem(22);
+    font-weight: 900;
+    color: $clr-card-header;
+    margin-bottom: rem(16);
 
-    @include breakpoint(sm) {
-      line-height: 1.6;
+    @include breakpoint(medium) {
+      font-size: rem(28);
+    }
+  }
+
+  &__body {
+    font-size: rem(15);
+    line-height: rem(25);
+    color: $clr-card-body;
+    margin-bottom: rem(24);
+
+    @include breakpoint(medium) {
+      font-size: rem(16);
+      line-height: rem(26);
+      margin-bottom: rem(20);
     }
   }
 
   &__order {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: rem(80);
-    background-color: var(--very-pale-blue);
-    border-radius: rem(5);
+    padding: rem(16);
+    background-color: $clr-order-bg;
     margin-bottom: rem(24);
+    border-radius: rem(11);
 
-    .icon_music {
+    &::before {
+      display: block;
+      content: "";
       width: rem(48);
       height: rem(48);
+      background: no-repeat url(/images/icon-music.svg);
+      margin-right: rem(20);
     }
 
-    .order__plan {
-      margin-right: rem(50);
-
-      p {
-        font-size: rem(14);
-        color: var(--dark-blue);
-        margin: 0;
-        line-height: 1.5;
-      }
-
-      .price {
-        color: var(--desaturated-blue);
-      }
-    }
-    button {
-      font-size: rem(13);
-      color: var(--bright-blue);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.7;
-      }
+    @include breakpoint(medium) {
+      padding: rem(25) rem(24);
     }
   }
 
-  &__payment {
-    font-family: inherit;
-    font-size: rem(16);
-    display: block;
-    width: 100%;
+  &__cta {
+    font-size: rem(15);
+    font-weight: 900;
+    color: $clr-card-cta;
     height: rem(50);
-    background-color: var(--bright-blue);
-    color: white;
-    border: none;
-    border-radius: rem(5);
     margin-bottom: rem(24);
+    border: none;
+    background: $clr-card-cta-bg;
+    border-radius: rem(11);
+    box-shadow: 0 20px 20px hsla(245, 75%, 52%, 0.1903);
     cursor: pointer;
-    box-shadow: 0 5px 20px hsla(245, 75%, 52%, 0.4);
 
     &:hover {
-      opacity: 0.7;
+      background-color: $clr-card-cta-hover;
     }
   }
 
   &__cancel {
-    font-family: inherit;
-    font-size: rem(16);
-    background-color: transparent;
+    font-size: rem(15);
+    font-weight: 900;
+    color: $clr-card-cancel;
     border: none;
+    background: transparent;
     cursor: pointer;
-    margin-bottom: rem(28);
-    color: var(--desaturated-blue);
 
     &:hover {
-      color: var(--dark-blue);
+      color: $clr-card-cancel-hover;
     }
   }
 }

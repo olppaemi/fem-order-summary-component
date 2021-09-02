@@ -1,0 +1,24 @@
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 46%, 23%);
+	--black: black;
+	--white: white;
+}
+
+$clr-bg: var(--pale-blue);
+$clr-card-bg: var(--white);
+$clr-card-header: var(--black);
+$clr-card-body: var(--desaturated-blue);
+$clr-order-bg: var(--very-pale-blue);
+$clr-order-plan: var(--dark-blue);
+$clr-order-price: var(--desaturated-blue);
+$clr-order-change: var(--bright-blue);
+$clr-order-change-hover: hsl(246, 83%, 68%);
+$clr-card-cta-bg: var(--bright-blue);
+$clr-card-cta: var(--white);
+$clr-card-cta-hover: hsl(246, 83%, 68%);
+$clr-card-cancel: var(--desaturated-blue);
+$clr-card-cancel-hover: var(--dark-blue);
