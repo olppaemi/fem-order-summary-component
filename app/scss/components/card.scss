@@ -5,8 +5,14 @@ $border-radius: rem(20);
 
 .card {
   width: 100%;
+  height: rem(567);
   background: $clr-card-bg;
   border-radius: $border-radius;
+  box-shadow: 0 40px 40px -20px hsla(228, 87%, 39%, 0.1518);
+
+  @include breakpoint(medium) {
+    height: rem(697);
+  }
 
   &__hero {
     height: rem(160);
@@ -72,6 +78,7 @@ $border-radius: rem(20);
 
     @include breakpoint(medium) {
       padding: rem(25) rem(24);
+      margin-bottom: rem(32);
     }
   }
 
@@ -89,6 +96,10 @@ $border-radius: rem(20);
 
     &:hover {
       background-color: $clr-card-cta-hover;
+    }
+
+    @include breakpoint(medium) {
+      margin-bottom: rem(32);
     }
   }
 
